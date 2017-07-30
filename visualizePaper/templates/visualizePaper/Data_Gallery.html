@@ -1,0 +1,21 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Data Gallery</title>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="{% static 'css/visualizePaper.css' %}">
+</head>
+<body>
+	{% for data in data %}
+	<div class="container">
+	<div class="row">
+		<h4> Title : {{ data.title }} </h4>
+		<p> Category: {{ data.category }}</p>
+		<p>Country: {{ data.location }}</p>
+	</div>
+	</div>
+	{% endfor %}
+</body>
+</html>

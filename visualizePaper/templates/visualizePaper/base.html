@@ -1,0 +1,45 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>HCI Research Project</title>
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href=" {% static 'css/visualizePaper.css' %}">
+	</head>
+	
+	<body>
+					
+		<!--Main Container starts from here-->
+			<nav class="navbar navbar-inverse">
+			  <div class="container-fluid">
+			    <div class="navbar-header">
+			      <a class="navbar-brand" href="#">HCI</a>
+			    </div>
+			    <ul class="nav navbar-nav">
+			      <li class="active"><a href="#">Home</a></li>
+			      <li><a href="{% url 'Data_Gallery' %}">Data Gallery</a></li>
+			      <li><a href="{% url 'About_page' %}">About Us</a></li>
+			  </div>
+			</nav>
+			<br><br><br><br><br>
+			
+				<div class="container">
+				<div class="row">
+					<div class="col-md-6">
+						<img class="img-responsive" 
+						src="{% static "images/image1.jpg" %}" alt="image1" />
+						<h4>Visualization between Total No of Papers and Conference</h4>
+					</div>
+					<div class="col-md-6">
+						<img class="img-responsive" src="{% static "images/image2.jpg" %}" alt="image2"> <br><br><br>
+						<h4>Force Layout Visualization with Mouseover labels</h4>
+					</div>
+				</div>
+				</div>	
+		
+	</div>
+					
+	</body>
+</html>
